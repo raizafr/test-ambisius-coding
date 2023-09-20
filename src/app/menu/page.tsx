@@ -24,11 +24,11 @@ export default function Menu() {
     if (storedMenu) {
       setMenu(JSON.parse(storedMenu));
     }
-    if(!reset){
+    if(reset){
       setMenu([])
     }
     
-  }, [reset]);
+  }, [reset,setMenu]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewMenuItem(e.target.value);
@@ -47,7 +47,7 @@ export default function Menu() {
     setMenu(updatedMenu);
     localStorage.setItem("menu", JSON.stringify(updatedMenu));
   };
-  
+
   return (
     <section className="bg-[#F1F5F9] mt-4 px-6 py-4 rounded-md min-h-[300px] lg:w-1/2 md:w-2/3 w-full">
       <div className="space-y-1">

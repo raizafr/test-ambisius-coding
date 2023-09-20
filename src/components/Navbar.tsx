@@ -1,3 +1,5 @@
+"use client";
+
 import { useResetContext } from "@/context/ResetContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
